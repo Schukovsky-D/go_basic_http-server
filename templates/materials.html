@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>{{ .Title}}</title>
+    </head>
+    <body>
+        <h1>{{ .Title}}</h1>
+        <ul>
+            {{range .Links}}
+                <li>
+                    <a href="{{ .Url}}">{{ .Title}}</a>
+                </li>
+            {{else}}
+                <li><b>Literally nothing</b></li>
+            {{end}}
+        </ul>
+    </body>
+</html>
